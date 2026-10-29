@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f4d3a">
+  <title>Acesso | Bancada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/acesso.css">
+</head>
+<body class="access-page">
+  <header class="access-header"><a class="brand" href="index.html">Bancada<span>.</span></a><a class="back-link" href="index.html">← Voltar à loja</a></header>
+  <main class="access-main">
+    <section class="access-intro">
+      <div class="eyebrow mono">COMPONENTES • TECNOLOGIA • CONEXÕES</div>
+      <h1>Sua bancada começa <em>por aqui.</em></h1>
+      <p>Entre na sua conta para acompanhar sua experiência na loja de componentes eletrônicos.</p>
+      <div class="intro-points"><div><b>01</b><span>Catálogo de componentes</span></div><div><b>02</b><span>Conta segura e individual</span></div><div><b>03</b><span>Acesso conforme seu perfil</span></div></div>
+    </section>
+    <section class="auth-card" aria-label="Área de acesso">
+      <div class="card-top"><span class="mono">ÁREA RESTRITA</span><span class="status-dot">SISTEMA ONLINE</span></div>
+      <h2 id="formTitle">Acesse sua conta</h2>
+      <p class="form-sub" id="formSubtitle">Escolha seu perfil e informe seus dados.</p>
+      <div class="role-switch" role="group" aria-label="Tipo de conta">
+        <button type="button" class="role-btn active" data-role="cliente" aria-pressed="true">Cliente</button>
+        <button type="button" class="role-btn" data-role="administrador" aria-pressed="false">Administrador</button>
+      </div>
+      <div class="mode-switch"><button type="button" class="mode-btn active" data-mode="login">Entrar</button><button type="button" class="mode-btn" data-mode="cadastro">Criar conta</button></div>
+      <form id="authForm" novalidate>
+        <div class="field" id="nameField" hidden><label for="nome">Nome completo</label><input id="nome" name="nome" autocomplete="name" placeholder="Como podemos te chamar?"></div>
+        <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required></div>
+        <div class="field"><div class="label-row"><label for="senha">Senha</label><span id="passwordHint">Mínimo de 8 caracteres no cadastro</span></div><input id="senha" name="senha" type="password" autocomplete="current-password" placeholder="Digite sua senha" required minlength="8"></div>
+        <div class="field" id="adminKeyField" hidden><label for="chaveAdmin">Chave de autorização administrativa</label><input id="chaveAdmin" name="chaveAdmin" type="password" autocomplete="off" placeholder="Chave fornecida pela empresa"></div>
+        <button class="submit-auth" id="submitAuth" type="submit">Entrar na Bancada <span>→</span></button>
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+      </form>
+      <p class="security-note"><span>◇</span> Suas credenciais são protegidas e armazenadas com segurança.</p>
+    </section>
+  </main>
+  <footer class="access-footer"><span>© Bancada — Loja de componentes eletrônicos</span><span class="mono">FEITO PARA QUEM CRIA.</span></footer>
+  <script src="js/acesso.js"></script>
+</body>
+</html>
