@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Bancada – Componentes Eletrônicos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS principal da loja -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="bar">
+
+            <div class="logo">Bancada</div>
+
+            <label class="search">
+                <span class="sr-only">Buscar componente</span>
+                <input
+                    id="q"
+                    type="search"
+                    placeholder="Buscar: resistor, ESP32, 10kΩ..."
+                >
+            </label>
+
+            <!-- Link para login e cadastro -->
+            <a class="account-link" href="acesso.html" id="accountLink">
+                Entrar / Criar conta
+            </a>
+
+            <button class="cartbtn" id="open">
+                Carrinho (<span id="cnt">0</span>)
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <h1>Componentes para a sua bancada</h1>
+
+        <p class="sub">
+            Resistores, capacitores, semicondutores e módulos
+            com especificações claras e estoque atualizado.
+        </p>
+
+        <div
+            class="chips"
+            id="chips"
+            role="group"
+            aria-label="Categorias">
+        </div>
+
+        <div
+            class="grid"
+            id="grid"
+            aria-live="polite">
+        </div>
+
+    </main>
+
+    <!-- Fundo do carrinho -->
+    <div class="shade" id="shade"></div>
+
+    <!-- Carrinho de compras -->
+    <aside id="cart" aria-label="Carrinho" aria-hidden="true">
+
+        <div class="ch">
+            <h2>Seu carrinho</h2>
+            <button class="x" id="close" aria-label="Fechar carrinho">×</button>
+        </div>
+
+        <div class="items" id="items"></div>
+
+        <div class="total">
+            <div class="row">
+                <span>Total</span>
+                <span id="sum">R$ 0,00</span>
+            </div>
+
+            <button class="add" id="buy">
+                Finalizar compra
+            </button>
+        </div>
+
+    </aside>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <!-- Arquivos JavaScript da loja -->
+    <script src="data.js"></script>
+    <script src="icons.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Verifica se existe usuário conectado -->
+    <script src=sessao.js"></script>
+
+</body>
+</html>
